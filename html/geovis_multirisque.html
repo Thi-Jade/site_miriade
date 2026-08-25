@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Géovisualisation interactive</title>
+
+    <link rel="stylesheet" href="../css/geovis_multirisque.css">
+    <link rel="icon" type="image/png" href="../img/lg_recover.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" rel="stylesheet">
+    <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+</head>
+
+<body>
+
+    <div class="map-container">
+
+        <!-- CARTE -->
+        <div id="map"></div>
+
+        <!-- UI OVERLAY -->
+        <div class="ui">
+
+            <button class="openbtn" onclick="openNav()">☰ Menu</button>
+
+            <!-- MENU SIDE PANEL -->
+            <div id="mySidepanel" class="sidepanel">
+
+                <button class="closebtn" type="button" onclick="closeNav()">×</button>
+
+                <div class="group">
+                    <div class="group-header">
+                        <p class="title">Présentation des projets multirisques</p>
+                        <span class="arrow">›</span>
+                    </div>
+                    <div class="group-content">
+                        <a href="../html/present_miriadesiber.html">Découvrir les projets MIRIADE et SIBER</a>
+                        <a href="../html/present_geovis.html">Déploiement d'un outil de géovisualisation multirisque</a>
+                        <a href="../html/partenaires.html">Nos partenaires</a>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="group-header">
+                        <p class="title">Comprendre le risque et le multirisque</p>
+                        <span class="arrow">›</span>
+                    </div>
+
+                    <div class="group-content">
+                        <a href="../html/risque_multirisque.html">Risque et multirisque</a>
+                        <a href="../html/geovis_multirisque.html">Géovisualisation de scénarios multirisques</a>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="group-header">
+                        <p class="title">Exemples d'évènements multirisque</p>
+                        <span class="arrow">›</span>
+                    </div>
+
+                    <div class="group-content">
+                        <a href="../html/chiffres_cles.html">Chiffres-clés</a>
+                        <a href="../html/map_event_multirisque.html">Cartographie d'évènements multirisques</a>
+                        <a href="../html/multirisque_france.html">Découvrir des évènements multirisques</a>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="group-header">
+                        <p class="title">Prévention du multirisque</p>
+                        <span class="arrow">›</span>
+                    </div>
+                    <div class="group-content">
+                        <a href="../html/prevent_multirisque.html">Ressources bibliographiques</a>
+                        <a href="../html/contact.html">Nous contacter</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SELECTEUR SCENARIOS -->
+            <div class="commune-selector">
+
+                <div class="commune-item" data-value="sim-miriade-sur-terre">
+                    Miriade sur terre
+                    <span class="line"></span>
+                </div>
+
+                <div class="commune-item" data-value="sim-miriade-sur-mer">
+                    Miriade sur mer
+                    <span class="line"></span>
+                </div>
+
+            </div>
+
+            <!-- PANNEAU GAUCHE : LEGENDE -->
+            <div id="legend-panel" class="panel left-panel">
+
+                <div class="legend-header">
+                    <img class="legend-logo" src="../img/lg_recover.png" alt="logo">
+                    <div class="panel-title-main">
+                        Géovisualisation interactive
+                    </div>
+                </div>
+
+                <div id="legend-content"></div>
+
+                <div class="legend-footer">
+                    <button id="reset-visits-btn" class="reset-btn" type="button">
+                        Réinitialiser le compteur
+                    </button>
+                </div>
+
+            </div>
+
+
+
+            <!-- PANNEAU DROIT : DESCRIPTION -->
+            <div id="description-panel" class="panel right-panel">
+                <button class="description-close" onclick="closeDescription()">×</button>
+
+                <div id="description-content"></div>
+
+            </div>
+
+            <!-- PANNEAU CONTENU -->
+            <div id="media-panel" class="panel media-panel">
+
+                <h3>Contenu</h3>
+
+                <div id="media-content"></div>
+
+            </div>
+
+        </div>
+
+        <script src="../javascript/geovis_multirisque.js"></script>
+
+    </div>
+
+</body>
+
+</html>

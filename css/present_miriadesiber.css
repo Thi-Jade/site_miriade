@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-left {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.nav-left h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.page-title {
+  color: white;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: white;
+}
+
+.openbtn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu span {
+  width: 35px;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+}
+
+.menu-container p {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+.menu-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidepanel {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background-color: #33373C;
+  overflow-x: hidden;
+  transition: 0.5s ease;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 10px 25px;
+  font-size: 15px;
+  color: #ddd;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 36px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.group .title {
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 25px 5px;
+  opacity: 0.7;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.search-toggle {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-toggle .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.search-input {
+  width: 0;
+  opacity: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  background: transparent;
+  transition: all 0.35s ease;
+  padding: 0;
+}
+
+.search-wrapper.active {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.search-wrapper.active .search-input {
+  width: 160px;
+  opacity: 1;
+  padding: 0 10px;
+  background: white;
+}
+
+.group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.group:last-child {
+  border-bottom: none;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 14px 10px;
+}
+
+.arrow {
+  color: white;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.group:last-child {
+  border-bottom: none;
+}
+
+.group .title {
+  color: white;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 20px 5px;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.arrow {
+  color: white;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.group-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.group-content a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  padding: 8px 35px;
+  font-weight: 300;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.group.open .group-content {
+  max-height: 500px;
+}
+
+.group.open .arrow {
+  transform: rotate(90deg);
+}
+
+.group-content a::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+.group-content a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  padding-left: 48px;
+  color: white;
+}
+
+.group-content a:hover::before {
+  background: white;
+  transform: translateY(-50%) scale(1.2);
+}

@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "events_multirisque",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "event": "Accident d'AZF", "loc": "Toulouse", "date": 2001, "risque": "installations_industrielles", "aleas_descr": "Accident industriel", "fiche": "../documents/fiches_multirisque/2001_AZF Toulouse.pdf", "pays": "France" }, "geometry": { "type": "Point", "coordinates": [ 1.427111915958138, 43.566965355227026 ] } },
+{ "type": "Feature", "properties": { "id": 2, "event": "Incendie de Lubrizol", "loc": "Rouen", "date": 2019, "risque": "installations_industrielles", "aleas_descr": "Accident industriel", "fiche": "../documents/fiches_multirisque/2019_Lubrizol Rouen.pdf", "pays": "France" }, "geometry": { "type": "Point", "coordinates": [ 1.059195866022662, 49.43616515810492 ] } },
+{ "type": "Feature", "properties": { "id": 3, "event": "Feux de forêt en Gironde", "loc": "Forêt domaniale de La Teste-de-Buch et massif de Landiras", "date": 2022, "risque": "feu_foret", "aleas_descr": "Feu de forêt", "fiche": "../documents/fiches_multirisque/2022_Feux de forêt Gironde.pdf", "pays": "France" }, "geometry": { "type": "Point", "coordinates": [ -0.65076133046461, 44.450558267471052 ] } },
+{ "type": "Feature", "properties": { "id": 4, "event": "Catastrophe de Blatten", "loc": "Blatten (Lötschen)", "date": 2025, "risque": "inondation;avalanche;mouvement_terrain", "aleas_descr": "Avalanche; Éboulement; Crue", "fiche": "../documents/fiches_multirisque/2025_Catastrophe de Blatten Suisse.pdf", "image": "../img/events_multirisque/catastrophe_blatten.jpg", "pays": "Suisse" }, "geometry": { "type": "Point", "coordinates": [ 7.819202444196607, 46.420538131117176 ] } },
+{ "type": "Feature", "properties": { "id": 5, "event": "Tempête Xynthia", "loc": "Charente-Maritime/Ardennes", "date": 2010, "risque": "tempete;risque_cote;rupture_barrage", "aleas_descr": "Tempête;Submersion marine;Rupture de digue;Érosion du littoral", "fiche": "../documents/fiches_multirisque/2010_Xynthia.pdf", "image": "../img/events_multirisque/xynthia_dive.png", "pays": "France" }, "geometry": { "type": "Point", "coordinates": [ -1.321557369422705, 46.332826025517555 ] } }
+]
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/lg_recover.png">
+    <title>Cartographie multirisque</title>
+    <link rel="stylesheet" href="../css/map_event_multirisque.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" />
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.15.1/build/ol.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css">
+    <script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
+</head>
+
+<body>
+
+    <!-- Barre de présentation-->
+    <header class="hero">
+
+        <img src="../img/img_risque_culture/barrage_tignes.png" alt="Image de fond">
+        <div class="overlay"></div>
+
+        <nav class="navbar">
+
+            <div class="nav-left">
+
+                <div class="nav-title-block">
+
+                    <a href="../index.html" class="title-link">
+                        <h1>Projet MIRIADE</h1>
+                    </a>
+
+                    <p class="subtitle">Se former à la culture multirisque</p>
+
+                </div>
+
+                <div class="nav-divider"></div>
+
+                <div class="page-title">
+                    Exemples d'évènements multirisque
+                </div>
+
+            </div>
+
+            <div class="menu-container">
+
+                <div class="search-wrapper">
+
+                    <input type="text" class="search-input" placeholder="Rechercher...">
+
+                    <button class="search-toggle" type="button">
+                        <img src="../img/loupe.png" class="icon" alt="Recherche">
+                    </button>
+
+                </div>
+
+                <button class="openbtn" type="button" onclick="openNav()">☰ MENU</button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Menu déroulant-->
+
+    <div id="mySidepanel" class="sidepanel">
+
+        <button class="closebtn" type="button" onclick="closeNav()">×</button>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Présentation des projets multirisques</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="../html/present_miriadesiber.html">Découvrir les projets MIRIADE et SIBER</a>
+                <a href="../html/present_geovis.html">Déploiement d'un outil de géovisualisation multirisque</a>
+                <a href="../html/partenaires.html">Nos partenaires</a>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Comprendre le risque et le multirisque</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="./html/risque_multirisque.html">Risque et multirisque</a>
+                <a href="../html/geovis_multirisque.html">Géovisualisation de scénarios multirisques</a>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Exemples d'évènements multirisque</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="./html/chiffres_cles.html">Chiffres-clés</a>
+                <a href="./html/map_event_multirisque.html">Cartographie d'évènements multirisques</a>
+                <a href="./html/multirisque_france.html">Découvrir des évènements multirisques</a>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Prévention du multirisque</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="../html/prevent_multirisque.html">Ressources bibliographiques</a>
+                <a href="../html/contact.html">Nous contacter</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cartographie-->
+
+    <div class="map-layout">
+
+        <!-- Sélection d'aléas-->
+
+        <aside class="layer-panel">
+
+            <h2>Types de risque</h2>
+            <h3 class="layer-subtitle">Risques naturels</h3>
+
+            <div class="layer-section">
+                    <label><input type="checkbox" class="alea-filter" value="inondation"> Inondation</label>
+                    <label><input type="checkbox" class="alea-filter" value="remontee_nappe"> Remontée de nappe</label>
+                    <label><input type="checkbox" class="alea-filter" value="risque_cote"> Risques côtiers</label>
+                    <label><input type="checkbox" class="alea-filter" value="recul"> Recul du trait de côte</label>
+                    <label><input type="checkbox" class="alea-filter" value="mouvement_terrain"> Mouvement de terrain</label>
+                    <label><input type="checkbox" class="alea-filter" value="seisme"> Séisme</label>
+                    <label><input type="checkbox" class="alea-filter" value="cavite"> Cavité souterraine</label>
+                    <label><input type="checkbox" class="alea-filter" value="argile"> Retrait / gonflement des argiles</label>
+                    <label><input type="checkbox" class="alea-filter" value="feu_foret"> Feu de forêt</label>
+                    <label><input type="checkbox" class="alea-filter" value="secheresse"> Sécheresse</label>
+                    <label><input type="checkbox" class="alea-filter" value="avalanche"> Avalanche</label>
+                    <label><input type="checkbox" class="alea-filter" value="radon"> Radon</label>
+                    <label><input type="checkbox" class="alea-filter" value="tempete">Tempête</label>
+                    <label><input type="checkbox" class="alea-filter" value="cyclone">Cyclone</label>
+                    <label><input type="checkbox" class="alea-filter" value="volcan"> Éruption volcanique</label>
+            </div>
+
+            <h3 class="layer-subtitle category-technological">Risques technologiques</h3>
+            <div class="layer-section">
+                <label><input type="checkbox" class="alea-filter" value="rupture_barrage">Rupture de barrage</label>
+                <label><input type="checkbox" class="alea-filter" value="installations_industrielles">Installations industrielles classées (ICPE)</label>
+                <label><input type="checkbox" class="alea-filter" value="tmd">Transport de matières dangereuses</label>
+                <label><input type="checkbox" class="alea-filter" value="cmd">Canalisations de matières dangereuses</label>
+                <label><input type="checkbox" class="alea-filter" value="pollution">Pollution des sols</label>
+                <label><input type="checkbox" class="alea-filter" value="nucleaire">Risque nucléaire</label>
+                <label><input type="checkbox" class="alea-filter" value="mine">Risque minier</label>
+            </div>
+
+            <div class="layer-buttons">
+                <button class="btn-valid" type="button">Valider</button>
+                <button class="btn-reset" type="button">Réinitialiser</button>
+            </div>
+
+        </aside>
+
+        <!-- Cartographie d'évènements multirisque-->
+        <div class="map-right">
+
+            <div id="map"></div>
+            <div id="mapOverlay" class="map-overlay"></div>
+            <div class="map-info" id="mapInfo">
+
+                <button class="close-info" id="closeInfo">×</button>
+                <h3>Bienvenue sur l'outil de cartographie interactive des événements multirisques</h3><br>
+                <p>
+                    Cet outil permet de visualiser des événements multirisques emblématiques survenus en France et à
+                    l'international. Il a pour objectif de mieux faire connaître ces événements, d'en faciliter
+                    l'exploration et de contribuer à la mémoire des catastrophes multirisques dans un contexte
+                    d'évolution du climat.<br><br>
+
+                    Chaque événement est représenté par un point sur la carte. En cliquant sur celui-ci, vous accédez à
+                    des informations détaillées telles que la date, le lieu, les aléas concernés, ainsi que des
+                    ressources documentaires complémentaires.<br><br>
+
+                    Les filtres fonctionnent selon une logique cumulative : un événement n'est affiché que s'il répond à
+                    l'ensemble des critères sélectionnés. Par exemple, en sélectionnant les risques feu de forêt et
+                    inondation par crue, seuls les événements associant simultanément ces deux phénomènes apparaîtront
+                    sur la
+                    carte.<br>
+
+                    <br>Cette cartographie a pour vocation de sensibiliser à la diversité des événements multirisques,
+                    de mettre en évidence leurs interactions et de contribuer à une meilleure compréhension des
+                    phénomènes susceptibles d'être amplifiés par le changement climatique.
+                </p>
+
+            </div>
+            <div class="fullscreen-btn" onclick="fullScreenView()"></div>
+
+        </div>
+
+        <div id="popup" class="ol-popup"></div>
+
+    </div>
+
+    <script src="../javascript/map_event_multirisque.js"></script>
+
+    <!-- Partenaires -->
+
+    <div class="partners-bis">
+        <div class="partners-bis-overlay"></div>
+        <div class="partners-bis-content">
+            <a href="https://www.info.gouv.fr/grand-dossier/france-2030" target="_blank"><img
+                    src="../img/lg_france_2030.png"></a>
+            <a href="https://www.univ-amu.fr/fr/public/vers-plus-dexcellence" target="_blank"><img
+                    src="../img/lg_amidex.png"></a>
+            <a href="https://www.univ-amu.fr/" target="_blank"><img src="../img/lg_amu.png"></a>
+            <a href="https://www.inrae.fr/" target="_blank"><img src="../img/lg_inrae.png"></a>
+            <a href="https://recover.paca.hub.inrae.fr/" target="_blank"><img src="../img/lg_recover.png"></a>
+            <a href="https://cesam-carto.univ-amu.fr/laboratoire/laboratoire-interdisciplinaire-en-urbanisme-lieu/"
+                target="_blank"><img src="../img/lg_lieu.png"></a>
+            <a href="https://www.cerege.fr/fr/" target="_blank"><img src="../img/lg_cerege.png"></a>
+        </div>
+        <div class="partners-links">
+            <span class="partners-left">© MIRIADE</span>
+            <a href="../html/contact.html">Contact</a>
+            <span>|</span>
+            <a href="../html/mentions_legales.html">Mentions légales</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

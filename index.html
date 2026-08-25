@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="./img/lg_recover.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Accueil - MIRIADE</title>
+</head>
+
+<body>
+
+    <!-- Présentation site-->
+
+    <div class="opening">
+        <div class="background-slider">
+            <div class="slide-track">
+                <img src="./img/img_risque_culture/glissement_terrain.png">
+                <img src="./img/img_risque_culture/incendies_bouchedurhone.png">
+                <img src="./img/img_risque_culture/inondation_morbihan.png">
+                <img src="./img/img_risque_culture/barrage_tignes.png">
+                <img src="./img/img_risque_culture/glissement_terrain.png">
+            </div>
+        </div>
+
+        <div class="img-overlay"></div>
+
+        <div class="header">
+            <div class="header-left">
+
+                <div class="partners">
+                    <a href="https://www.info.gouv.fr/grand-dossier/france-2030" target="_blank"><img
+                            src="./img/lg_france_2030.png"></a>
+                    <a href="https://www.univ-amu.fr/fr/public/vers-plus-dexcellence" target="_blank"><img
+                            src="./img/lg_amidex.png"></a>
+                    <a href="https://www.univ-amu.fr/" target="_blank"><img src="./img/lg_amu.png"></a>
+                    <a href="https://www.inrae.fr/" target="_blank"><img src="./img/lg_inrae.png"></a>
+                    <a href="https://recover.paca.hub.inrae.fr/" target="_blank"><img src="./img/lg_recover.png"></a>
+                    <a href="https://cesam-carto.univ-amu.fr/laboratoire/laboratoire-interdisciplinaire-en-urbanisme-lieu/"
+                        target="_blank"><img src="./img/lg_lieu.png"></a>
+                    <a href="https://www.cerege.fr/fr/" target="_blank"><img src="./img/lg_cerege.png"></a>
+
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="search-wrapper">
+                    <button class="search-toggle">
+                        <img src="./img/loupe.png" class="icon">
+                    </button>
+                    <input type="text" class="search-input" placeholder="Rechercher...">
+                </div>
+
+                <button class="openbtn" onclick="openNav()">☰ MENU</button>
+            </div>
+        </div>
+
+        <div class="slide-overlay">
+
+            <p class="title-first">Développer la culture multirisque</p>
+
+            <h1 class="title-main">Projet MIRIADE</h1>
+
+            <div class="title-end">
+                <span>RECOVER</span>
+                <span class="separator">|</span>
+                <span>CEREGE</span>
+                <span class="separator">|</span>
+                <span>LIEU</span>
+            </div>
+
+            <a href="./html/geovis_multirisque.html" class="slide-btn">
+                Explorer la géovisualisation interactive
+            </a>
+
+            <div class="scroll-arrow"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Menu déroulant écran réduit-->
+
+    <div id="mySidepanel" class="sidepanel">
+
+        <button class="closebtn" type="button" onclick="closeNav()">×</button>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Présentation des projets multirisques</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="../html/present_miriadesiber.html">Découvrir les projets MIRIADE et SIBER</a>
+                <a href="../html/present_geovis.html">Déploiement d'un outil de géovisualisation multirisque</a>
+                <a href="../html/partenaires.html">Nos partenaires</a>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Comprendre le risque et le multirisque</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="../html/risque_multirisque.html">Risque et multirisque</a>
+                <a href="../html/geovis_multirisque.html">Géovisualisation de scénarios multirisques</a>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Exemples d'évènements multirisque</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="../html/chiffres_cles.html">Chiffres-clés</a>
+                <a href="../html/map_event_multirisque.html">Cartographie d'évènements multirisques</a>
+                <a href="../html/multirisque_france.html">Découvrir des évènements multirisques</a>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group-header">
+                <p class="title">Prévention du multirisque</p>
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="group-content">
+                <a href="../html/prevent_multirisque.html">Ressources bibliographiques</a>
+                <a href="../html/contact.html">Nous contacter</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Barre de navigation-->
+
+    <ul class="navbar">
+
+        <li class="subnav">
+            <a href="#">Présentation des projets multirisques</a>
+            <div class="subnav-content">
+                <a href="./html/present_miriadesiber.html">Découvrir les projets MIRIADE et SIBER</a>
+                <a href="./html/present_geovis.html">Déploiement d'un outil de géovisualisation multirisque</a>
+                <a href="./html/partenaires.html">Nos partenaires</a>
+            </div>
+        </li>
+
+        <li class="subnav">
+            <a href="#">Comprendre le risque et le multirisque</a>
+            <div class="subnav-content">
+                <a href="./html/risque_multirisque.html">Risque et multirisque</a>
+                <a href="./html/geovis_multirisque.html">Géovisualisation de scénarios multirisques</a>
+            </div>
+        </li>
+
+        <li class="subnav">
+            <a href="#">Exemples d'évènements multirisque</a>
+            <div class="subnav-content">
+                <a href="./html/chiffres_cles.html">Chiffres-clés</a>
+                <a href="./html/map_event_multirisque.html">Cartographie d'évènements multirisques</a>
+                <a href="./html/multirisque_france.html">Découvrir des évènements multirisques</a>
+            </div>
+        </li>
+
+        <li class="subnav">
+            <a href="#">Prévention du multirisque</a>
+            <div class="subnav-content">
+                <a href="./html/prevent_multirisque.html">Ressources bibliographiques</a>
+                <a href="./html/contact.html">Nous contacter</a>
+            </div>
+        </li>
+
+    </ul>
+
+
+    <!-- Présentation projet MIRIADE -->
+
+    <div class="cs-content" id="multirisque">
+
+        <h2 class="cs-title">Projet MIRIADE</h2>
+
+        <div class="cs-right">
+            <p class="cs-text">
+                Les risques naturels occupent en France une large partie du territoire : environ deux tiers
+                des 36 000 communes sont exposées à au moins un risque, voire à plusieurs dans certains contextes
+                géographiques.
+                Dans les Alpes, la FFCAM (Fédération française des clubs alpins et de montagne) recense au moins deux
+                aléas par collectivité, et le CYPRES quatre dans le département du Var (Centre d'information pour la
+                prévention des risques majeurs).
+                Le croisement de ces aléas sur un même territoire, renforcé par l’influence du changement climatique et
+                l'urbanisation croissante de zones exposées au risque, tend à complexifier les événements extrêmes et
+                leur gestion.
+                Outre l'augmentation de l'intensité et de la fréquence de certains phénomènes météorologiques
+                (précipitations, variabilité des températures intra-saisonnière), aléas et enjeux deviennent
+                interdépendants et peuvent
+                engendrer des évènements dits "multirisques".
+            </p>
+
+            <p class="cs-text">
+                Le renforcement de la préparation des populations apparaît dès lors comme un levier essentiel pour faire
+                face à ces situations exceptionnelles et permettre aux territoires d'améliorer leur résilience. C’est
+                dans
+                cette perspective que s’inscrit le projet de recherche MIRIADE. Lancé en 2023 par l’UMR RECOVER (INRAE
+                PACA),
+                l’UMR CEREGE et le LIEU (Aix-Marseille Université), et financé par l’initiative d’excellence A*MIDEX,
+                celui-ci vise à développer une démarche et un outil de représentation graphique et cartographique de
+                scénarios multirisques pour l’aide à la décision et la communication vers le grand public.
+            </p>
+
+            <div class="cs-buttons">
+                <a href="./html/risque_multirisque.html" class="cs-button-main" target="_blank">
+                    Comprendre le multirisque
+                </a>
+                <a href="./html/present_miriadesyber.html" class="cs-button-main" target="_blank">
+                    En savoir plus sur le projet MIRIADE
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Portail thématique-->
+
+    <div class="port-header">
+        <h2 class="port-title">Portail thématique</h2>
+        <p class="port-subtitle">
+            Découvrir des événements multirisques récents sur le territoire
+        </p>
+    </div>
+
+
+    <div class="port_them">
+
+        <!-- Tempête Alex -->
+        <div class="port">
+
+            <a href="#">
+
+                <div class="port-img">
+                    <img src="./img/img_risque_culture/tempete_alex.png" alt="Tempête Alex">
+                </div>
+
+                <div class="port-panel">
+
+                    <span class="port-category">
+                        ALPES-MARITIMES
+                    </span>
+
+                    <span class="port-date">
+                        2020
+                    </span>
+
+                    <h3>
+                        Tempête Alex
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        <!-- Incendie de Gonfaron -->
+        <div class="port">
+
+            <a href="#">
+
+                <div class="port-img">
+                    <img src="./img/img_risque_culture/sdis_var.png" alt="Incendie de Gonfaron">
+                </div>
+
+                <div class="port-panel">
+
+                    <span class="port-category">
+                        VAR
+                    </span>
+
+                    <span class="port-date">
+                        2021
+                    </span>
+
+                    <h3>
+                        Incendie de Gonfaron
+                    </h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Portail cartographique-->
+
+    <div class="carto-section">
+
+        <div class="carto-header">
+            <h2>Portail cartographique</h2>
+        </div>
+
+        <div class="carto-content">
+
+            <div class="carto-left">
+
+                <h3>Visualiser des évènements multirisques réels</h3>
+
+                <p>
+                    Cette carte vous invite à découvrir plusieurs évènements multirisques marquants survenus en France
+                    et à travers le monde. Chaque évènement est accompagné d'une fiche descriptive présentant son
+                    contexte, les aléas en jeu, le déroulement de la crise ainsi que ses principaux impacts sur les
+                    territoires concernés.
+
+                    Explorez ces exemples pour mieux comprendre comment plusieurs phénomènes naturels peuvent se
+                    combiner ou se succéder et amplifier leurs conséquences. <br><br> N'hésitez pas ensuite à consulter la <a
+                        href="./html/geovis_multirisque.html">géovisualisation interactive des scénarios
+                        multirisques</a> afin d'approfondir votre compréhension des mécanismes du multirisque et
+                    d'explorer différents scénarios de manière interactive.
+                </p>
+
+                <div class="cs-buttons-carto">
+                    <a href="./html/map_event_multirisque.html" class="cs-button-main">
+                        Explorer la carte interactive
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="carto-right">
+                <img src="./img/img_risque_culture/map_event_multirisque.png" alt="Carte">
+            </div>
+
+        </div>
+
+    </div>
+
+     <!-- Formulaire de contact-->
+
+    <div id="contact" class="cs-form-group">
+
+        <div class="cs-contact-header">
+            <p class="cs-pretitle">
+                Des questions ? Des suggestions ? Vous souhaitez en savoir plus sur le multirisque ?
+            </p>
+        </div>
+
+        <div class="cs-contact-grid">
+
+            <div class="cs-contact-left">
+                <h2 class="cs-title-contact">Nous contacter</h2>
+            </div>
+
+            <div class="cs-contact-right">
+
+                <form id="cs-form" class="cs-form">
+
+                    <div class="cs-row">
+                        <label class="cs-label">
+                            <input class="cs-input" required type="text" name="nom" placeholder="Nom">
+                        </label>
+
+                        <label class="cs-label">
+                            <input class="cs-input" required type="email" name="email" placeholder="Email">
+                        </label>
+                    </div>
+
+                    <label class="cs-label">
+                        <textarea class="cs-input cs-textarea" required name="message"
+                            placeholder="Entrez votre message ici..."></textarea>
+                    </label>
+
+                    <label class="cs-consent-bis">
+                        <input type="checkbox" required name="consent">
+                        <span>
+                            En cochant cette case et en soumettant ce formulaire, j’accepte que mes données personnelles
+                            soient utilisées par l’UMR RECOVER pour me recontacter dans le cadre de ma demande, enrichir
+                            sa base de données sur le multirisque ou à des fins de recherche.
+                        </span>
+                    </label>
+
+                    <button class="cs-submit" type="submit">
+                        <span>Envoyer</span>
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+
+        emailjs.init({
+            publicKey: "PSJ5iY-wGaddVZL1M",
+        });
+
+
+        document.getElementById("cs-form").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            emailjs.sendForm(
+                "service_euwgvuv",
+                "template_f7dk66b",
+                document.getElementById("cs-form")
+            )
+                .then(
+                    function (response) {
+                        alert("Message envoyé avec succès !");
+                        document.getElementById("cs-form").reset();
+                    },
+                    function (error) {
+                        alert("Échec de l'envoi du message. Merci de réessayer.");
+                        console.error("Erreur EmailJS :", error);
+                    }
+                );
+
+        });
+
+    </script>
+
+    <!-- Partenaires et mentions légales -->
+
+    <div class="partners-bis">
+        <div class="partners-bis-overlay"></div>
+        <div class="partners-bis-content">
+            <a href="https://www.info.gouv.fr/grand-dossier/france-2030" target="_blank"><img
+                    src="./img/lg_france_2030.png"></a>
+            <a href="https://www.univ-amu.fr/fr/public/vers-plus-dexcellence" target="_blank"><img
+                    src="./img/lg_amidex.png"></a>
+            <a href="https://www.univ-amu.fr/" target="_blank"><img src="./img/lg_amu.png"></a>
+            <a href="https://www.inrae.fr/" target="_blank"><img src="./img/lg_inrae.png"></a>
+            <a href="https://recover.paca.hub.inrae.fr/" target="_blank"><img src="./img/lg_recover.png"></a>
+            <a href="https://cesam-carto.univ-amu.fr/laboratoire/laboratoire-interdisciplinaire-en-urbanisme-lieu/"
+                target="_blank"><img src="./img/lg_lieu.png"></a>
+            <a href="https://www.cerege.fr/fr/" target="_blank"><img src="./img/lg_cerege.png"></a>
+        </div>
+        <div class="partners-links">
+            <span class="partners-left">© MIRIADE</span>
+            <a href="./html/contact.html">Contact</a>
+            <span>|</span>
+            <a href="./html/mentions_legales.html">Mentions légales</a>
+        </div>
+    </div>
+
+    <script src="./javascript/index.js"></script>
+
+</body>
+
+</html>
